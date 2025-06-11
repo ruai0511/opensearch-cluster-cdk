@@ -997,8 +997,8 @@ export class InfraStack extends Stack {
       }));
     } else {
       cfnInitConfig.push(InitCommand.shellCommand('set -ex;cd opensearch;sudo -u ec2-user bin/opensearch-plugin install '
-          + `https://ci.opensearch.org/ci/dbc/distribution-build-opensearch/${this.distVersion}/latest/linux/${this.cpuArch}`
-          + `/tar/builds/opensearch/core-plugins/repository-s3-${this.distVersion}.zip --batch`, {
+          + `https://ci.opensearch.org/ci/dbc/distribution-build-opensearch/3.1.0/latest/linux/${this.cpuArch}`
+          + `/tar/builds/opensearch/core-plugins/repository-s3-3.1.0.zip --batch`, {
         cwd: currentWorkDir,
         ignoreErrors: false,
       }));
